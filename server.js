@@ -1,8 +1,8 @@
 var dbd = require('dbd.js')
 var fs = require('fs')
 var bot = new dbd.Bot({
-	token:process.env.TOKEN,
-	prefix:"$getServerVar[prefix]"
+	token:process.env.812019177824976946,
+	prefix:"$getServerVar[*]"
 })
 bot.onMessage()
 var reader = fs.readdirSync("./komutlar/").filter(file => file.endsWith(".js"))
@@ -18,7 +18,7 @@ bot.variables({
 })
 
   bot.command({
-    name:"prefix",
+    name:"*",
     code:`
     $argsCheck[1;Prefix Değiştirmek İçin $getServerVar[prefix]prefix <yenideğer>]
     $setServerVar[prefix;$noMentionMessage]
